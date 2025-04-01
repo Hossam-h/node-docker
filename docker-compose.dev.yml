@@ -8,6 +8,6 @@ services:
     volumes:
       - .:/app:ro
     environment:
-      - MODE=production
+      - MODE=development
     command: npm run start-dev
    

@@ -6,6 +6,6 @@ services:
       args:
         - NODE_ENV=production
     environment:
-      - MODE=production
+      - NODE_ENV=production
     command: npm start
    

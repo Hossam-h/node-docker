@@ -2,6 +2,7 @@ version: "3"
 services:
   node-app:
     container_name: node-container
+    image: hossamdocker12/dockarize-node
     ports:
       - "4000:4000"
     depends_on:
@@ -26,7 +27,7 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
-      ME_CONFIG_BASICAUTH: false
+      ME_CONFIG_BASICAUTH: "false"
   redis:
     image: redis
     depends_on:
