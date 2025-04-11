@@ -1,7 +1,7 @@
 version: "3"
 services:
   node-app:
-    container_name: node-container
+    # container_name: node-container
     image: hossamdocker12/dockarize-node
     ports:
       - "4000:4000"
