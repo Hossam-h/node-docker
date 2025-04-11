@@ -8,6 +8,15 @@ services:
     depends_on:
       - mongo
       - redis
+    deploy:
+      replicas: 4
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on_failure
+        delay: 5s
+
   mongo:
     image: mongo
     restart: always
